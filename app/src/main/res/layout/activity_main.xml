@@ -1,71 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
 
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Peso(kg)"
-              android:gravity="center"
-              android:textSize="20sp"
-              android:layout_marginTop="20sp"/>
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <EditText android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:textSize="20sp"
-              android:inputType="numberDecimal"
-              android:layout_margin="20sp"
-              android:id="@+id/txtPeso"/>
 
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Altura(m)"
-              android:gravity="center"
-              android:textSize="20sp"
-              android:layout_marginTop="20sp"/>
+    <Button
+        android:id="@+id/btBuscape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscapé"
+        app:layout_constraintBottom_toTopOf="@+id/btAmazon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
 
-    <EditText android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:textSize="20sp"
-              android:inputType="numberDecimal"
-              android:layout_margin="20sp"
-              android:id="@+id/txtAltura"/>
+    <Button
+        android:id="@+id/btAmazon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Amazon"
+        app:layout_constraintBottom_toTopOf="@+id/btMagaLu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btBuscape"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Sexo"
-              android:gravity="center"
-              android:textSize="20sp"/>
+    <Button
+        android:id="@+id/btSubmarino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Submarino"
+        app:layout_constraintBottom_toTopOf="@+id/btmercadoLivre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btMagaLu"
+        app:layout_constraintVertical_bias="0.202" />
 
-    <RadioGroup android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:id="@+id/rgSexo">
+    <Button
+        android:id="@+id/btmercadoLivre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Mercado Livre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btSubmarino"
+        app:layout_constraintVertical_bias="0.237" />
 
-        <RadioButton android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="Feminino"
-                     android:layout_margin="20sp"
-                     android:id="@+id/rbFeminino"/>
+    <Button
+        android:id="@+id/btMagaLu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="MagaLu"
+        app:layout_constraintBottom_toTopOf="@+id/btSubmarino"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btAmazon"
+        app:layout_constraintVertical_bias="0.176"
+        android:layout_marginBottom="20dp"/>
 
-        <RadioButton android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="Masculino"
-                     android:layout_margin="20sp"
-                     android:id="@+id/rbMasculino"/>
-
-    </RadioGroup>
-
-    <Button android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Calcular"
-            android:id="@+id/btCalcular"/>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
