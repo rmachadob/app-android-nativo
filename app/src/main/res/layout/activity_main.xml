@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -9,65 +11,95 @@
     android:background="@color/colorPrimary">
 
 
-    <ImageButton
-        android:id="@+id/btBuscape"
-        android:layout_width="270dp"
-        android:layout_height="107dp"
-        app:layout_constraintBottom_toTopOf="@+id/btAmazon"
+    <ImageView
+        android:id="@+id/Buscape"
+        android:layout_width="165dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="24dp"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/Amazon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/buscape" />
 
-    <ImageButton
-        android:id="@+id/btAmazon"
-        android:layout_width="271dp"
-        android:layout_height="109dp"
-        android:layout_gravity="center"
-        android:text="Amazon"
-        app:layout_constraintBottom_toTopOf="@+id/btMagaLu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btBuscape"
-        app:srcCompat="@drawable/amazon"
-        tools:layout_editor_absoluteY="204dp" />
-
-    <ImageButton
-        android:id="@+id/btMagaLu"
-        android:layout_width="261dp"
-        android:layout_height="109dp"
-        android:layout_gravity="center"
-        android:text="MagaLu"
-        app:layout_constraintBottom_toTopOf="@+id/btSubmarino"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btAmazon"
-        app:srcCompat="@drawable/magalu"
-        tools:layout_editor_absoluteY="371dp" />
-
-    <ImageButton
-        android:id="@+id/btSubmarino"
-        android:layout_width="254dp"
-        android:layout_height="109dp"
-        android:layout_gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btMagaLu"
-        app:srcCompat="@drawable/submarino" />
-
-    <Button
-        android:id="@+id/button"
+    <WebView
+        android:id="@+id/viewBuscape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="Sobre"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/Amazon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/Amazon"
+        android:layout_width="212dp"
+        android:layout_height="70dp"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toTopOf="@id/Magalu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Buscape"
+        app:srcCompat="@drawable/amazon"
+        tools:layout_editor_absoluteY="166dp" />
+
+    <WebView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/Magalu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Buscape" />
+
+    <ImageView
+        android:id="@+id/Magalu"
+        android:layout_width="135dp"
+        android:layout_height="57dp"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/Submarino"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Amazon"
+        app:srcCompat="@drawable/magalu" />
+
+    <WebView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/Submarino"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Amazon" />
+
+    <ImageView
+        android:id="@+id/Submarino"
+        android:layout_width="105dp"
+        android:layout_height="59dp"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/Sobre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Magalu"
+        app:srcCompat="@drawable/submarino" />
+
+    <WebView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/Sobre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Magalu" />
+
+    <Button
+        android:id="@+id/Sobre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
